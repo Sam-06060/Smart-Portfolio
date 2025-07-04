@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #5b21b6, #1e1e3f);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.page-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+.phone {
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #9333ea;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.nav-toggle button {
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #161622;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 8px 0;
+}
+
+.dropdown-menu a:hover {
+  color: #a855f7;
+}

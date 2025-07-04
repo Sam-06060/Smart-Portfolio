@@ -1,0 +1,133 @@
+/* ===== General Body Styling ===== */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #5b21b6, #1e1e3f);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  overflow-x: hidden;
+
+  /* Page fade */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+/* ===== Page Content Fade + Slide Animation ===== */
+.page-content {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+body.loaded .page-content {
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Typography ===== */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+p {
+  max-width: 600px;
+  font-size: 1.2em;
+}
+
+/* ===== Shared Page Layout ===== */
+.page-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 10px 20px;
+  background-color: #a855f7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #9333ea;
+}
+
+/* ===== Dropdown Menu Styles ===== */
+.nav-toggle {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 10000;
+}
+
+.nav-toggle button {
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #161622;
+  opacity: 1;
+  backdrop-filter: none;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  z-index: 10000;
+}
+
+.dropdown-menu.show {
+  display: flex;
+  max-height: 500px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #e0e0e0;
+  padding: 8px 0;
+}
+
+.dropdown-menu a:hover {
+  color: #a855f7;
+}
+
+/* ===== Cert Card Hover Effects ===== */
+.cert-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
