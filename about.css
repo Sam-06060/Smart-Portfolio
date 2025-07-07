@@ -28,12 +28,12 @@ h1 {
   position: relative;
   top: -20px; /* move heading up slightly */
   margin-bottom: 20px;
-  font-size: 2.5rem;   /* ~40px — a subtle increase */
+  font-size: 2.5rem; /* ~40px */
 }
 
 p {
   max-width: 600px;
-  font-size: 1.125rem; /* ~18px — a subtle increase */
+  font-size: 1.125rem; /* ~18px */
   line-height: 1.6;
 }
 
@@ -96,4 +96,32 @@ p {
 
 .dropdown-menu a:hover {
   color: #a855f7;
+}
+
+/* -------- 📱 Responsive Fix for Mobile -------- */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .page-content {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .right-photo {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+    top: -10px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
